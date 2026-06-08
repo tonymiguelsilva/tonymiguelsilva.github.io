@@ -71,6 +71,28 @@ export function Projects() {
               key={p.title}
               className="group relative bg-gradient-card border border-border rounded-2xl p-7 shadow-card hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >
+            {p.link && (
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noreferrer"
+                className="relative block -mx-7 -mt-7 mb-6 aspect-video overflow-hidden rounded-t-2xl border-b border-border bg-secondary"
+                aria-label={`Abrir ${p.title} no Power BI`}
+              >
+                <iframe
+                  src={p.link}
+                  title={p.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full pointer-events-none"
+                  scrolling="no"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+                <span className="absolute bottom-2 right-2 font-mono text-[10px] px-2 py-1 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90">
+                  abrir dashboard ↗
+                </span>
+              </a>
+            )}
+
               <div className="flex items-center justify-between mb-5">
                 <span className="font-mono text-[10px] tracking-widest text-accent uppercase">
                   {String(idx + 1).padStart(2, "0")} / {p.tag}
