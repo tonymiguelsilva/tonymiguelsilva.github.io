@@ -13,7 +13,7 @@ const projects = [
     ],
     stack: ["Power BI", "DAX", "Power Query", "Python"],
     source: "Dados fictícios — Pinski Modas (Curso Xperiun)",
-    link: null,
+    link: "https://app.powerbi.com/view?r=eyJrIjoiYzNiNjc5ZmItMWRkMi00ZjIzLWE2MTQtNzVhMTg3NTc3NWJmIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
   },
   {
     tag: "Controladoria • DRE",
@@ -29,7 +29,7 @@ const projects = [
     ],
     stack: ["Power BI", "DAX", "Power Query", "Figma"],
     source: "Dados fictícios — XPBucks (Curso Xperiun)",
-    link: null,
+    link: "https://app.powerbi.com/view?r=eyJrIjoiM2NlNDY3NjktNWI5ZS00NGVkLWJlNDQtMTNmMjM5M2Y1NmEyIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
   },
   {
     tag: "Financeiro • Rentabilidade",
@@ -45,7 +45,7 @@ const projects = [
     ],
     stack: ["Power BI", "DAX", "Power Query", "Figma"],
     source: "Dados fictícios — Xperiun Data Analytics",
-    link: null,
+    link: "https://app.powerbi.com/view?r=eyJrIjoiYTZlOWRmOGEtOGMwNS00MWI3LWEyZGEtZGM5M2Y3OTdkMzIyIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
   },
 ];
 
