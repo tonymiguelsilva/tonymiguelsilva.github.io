@@ -1,3 +1,7 @@
+import p1 from "@/assets/projects/p1.jpg";
+import p2 from "@/assets/projects/p2.jpg";
+import p3 from "@/assets/projects/p3.jpg";
+
 const projects = [
   {
     tag: "Comercial • Forecast • ML",
@@ -14,6 +18,7 @@ const projects = [
     stack: ["Power BI", "DAX", "Power Query", "Python"],
     source: "Dados fictícios — Pinski Modas (Curso Xperiun)",
     link: "https://app.powerbi.com/view?r=eyJrIjoiYzNiNjc5ZmItMWRkMi00ZjIzLWE2MTQtNzVhMTg3NTc3NWJmIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
+    image: p1,
   },
   {
     tag: "Controladoria • DRE",
@@ -30,6 +35,7 @@ const projects = [
     stack: ["Power BI", "DAX", "Power Query", "Figma"],
     source: "Dados fictícios — XPBucks (Curso Xperiun)",
     link: "https://app.powerbi.com/view?r=eyJrIjoiM2NlNDY3NjktNWI5ZS00NGVkLWJlNDQtMTNmMjM5M2Y1NmEyIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
+    image: p2,
   },
   {
     tag: "Financeiro • Rentabilidade",
@@ -46,6 +52,7 @@ const projects = [
     stack: ["Power BI", "DAX", "Power Query", "Figma"],
     source: "Dados fictícios — Xperiun Data Analytics",
     link: "https://app.powerbi.com/view?r=eyJrIjoiYTZlOWRmOGEtOGMwNS00MWI3LWEyZGEtZGM5M2Y3OTdkMzIyIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
+    image: p3,
   },
 ];
 
@@ -79,14 +86,13 @@ export function Projects() {
                 className="relative block -mx-7 -mt-7 mb-6 aspect-video overflow-hidden rounded-t-2xl border-b border-border bg-secondary"
                 aria-label={`Abrir ${p.title} no Power BI`}
               >
-                <iframe
-                  src={p.link}
-                  title={p.title}
+                <img
+                  src={p.image}
+                  alt={`Preview do ${p.title}`}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full pointer-events-none"
-                  scrolling="no"
+                  className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
                 <span className="absolute bottom-2 right-2 font-mono text-[10px] px-2 py-1 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90">
                   abrir dashboard ↗
                 </span>
