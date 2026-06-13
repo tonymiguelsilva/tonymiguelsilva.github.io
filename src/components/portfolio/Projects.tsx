@@ -4,20 +4,20 @@ import p3 from "@/assets/projects/p3.jpg";
 
 const projects = [
   {
-    tag: "Comercial • Forecast • ML",
-    title: "Dashboard Comercial com Forecast e Recomendação",
-    scenario: "Setor comercial — análise de metas, forecast e recomendação de produtos",
+    tag: "Vendas • Trimestral",
+    title: "Dashboard de Vendas Trimestral",
+    scenario: "Análise histórica de desempenho de vendas",
     description:
-      "Painel dinâmico que substituiu fechamentos manuais em planilhas descentralizadas, reduzindo o tempo de decisão de 14 dias para poucas horas. Integra modelo de recomendação em Python baseado no histórico de compras e similaridade entre clientes.",
+      "Projeto com foco em análises exploratórias do desempenho de vendas trimestrais, comparando períodos ao longo do tempo, descontos concedidos e performance de vendedores e produtos.",
     highlights: [
-      "Forecast de vendas com projeção e gargalos antecipados",
-      "Recomendação automática de produtos por similaridade de clientes",
-      "Performance por gerente, supervisor e equipe",
-      "Real x Meta por mês e região",
+      "Faturamento, descontos, produtos vendidos e quantidade",
+      "Comparativo entre trimestres e anos",
+      "Segmentação por vendedor, marca e categoria",
+      "Ranking de vendedores e análise por categoria",
     ],
-    stack: ["Power BI", "DAX", "Power Query", "Python"],
-    source: "Dados fictícios — Pinski Modas (Curso Xperiun)",
-    link: "https://app.powerbi.com/view?r=eyJrIjoiYzNiNjc5ZmItMWRkMi00ZjIzLWE2MTQtNzVhMTg3NTc3NWJmIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
+    stack: ["Power BI", "Power Query"],
+    source: "Dados fictícios — análises exploratórias",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiZGUxZWE0ODAtZjNjMC00OTdkLWEyNTMtZWJmYjU4ZDFiZTdjIiwidCI6ImJiMTc5Y2MxLWI5YjUtNDlkZi04YTBhLWI3ZDJjYjg3OTU2OSJ9",
     image: p1,
   },
   {
