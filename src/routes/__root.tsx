@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portfólio de Tony Miguel da Silva — Analytics Engineer, BI e Engenharia de Dados. Power BI, SQL, Python, dbt, Airflow, Databricks." },
       { name: "author", content: "Tony Miguel da Silva" },
       { property: "og:title", content: "Tony Miguel da Silva — Analytics & Data Engineer" },
-      { property: "og:description", content: "Pipelines de dados, dashboards estratégicos e arquitetura moderna em cloud." },
+      { property: "og:description", content: "Portfólio de Tony Miguel da Silva — Analytics Engineer, BI e Engenharia de Dados. Power BI, SQL, Python, dbt, Airflow, Databricks." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Tony Miguel da Silva — Analytics & Data Engineer" },
+      { name: "twitter:description", content: "Portfólio de Tony Miguel da Silva — Analytics Engineer, BI e Engenharia de Dados. Power BI, SQL, Python, dbt, Airflow, Databricks." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/758d8319-6815-4ed9-b962-832c1afbfb6e/id-preview-5607ad7f--fe78d238-444a-4591-9073-4fadd65dff42.lovable.app-1781372789990.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/758d8319-6815-4ed9-b962-832c1afbfb6e/id-preview-5607ad7f--fe78d238-444a-4591-9073-4fadd65dff42.lovable.app-1781372789990.png" },
     ],
     links: [
       {
