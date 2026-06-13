@@ -83,14 +83,15 @@ export function Projects() {
                 href={p.link}
                 target="_blank"
                 rel="noreferrer"
-                className="relative block -mx-7 -mt-7 mb-6 aspect-[1400/751] overflow-hidden rounded-t-2xl border-b border-border bg-secondary"
+                className="relative block -mx-7 -mt-7 mb-6 overflow-hidden rounded-t-2xl border-b border-border bg-secondary"
+                style={{ aspectRatio: "1400 / 751" }}
                 aria-label={`Abrir ${p.title} no Power BI`}
               >
                 <img
                   src={p.image}
                   alt={`Preview do ${p.title}`}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-contain object-center transition-transform duration-500"
+                  className="block w-full h-full object-contain object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
                 <span className="absolute bottom-2 right-2 font-mono text-[10px] px-2 py-1 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90">
