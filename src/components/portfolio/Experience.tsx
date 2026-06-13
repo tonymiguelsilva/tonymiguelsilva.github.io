@@ -4,7 +4,9 @@ const items = [
     role: "Analista de Dados Pleno",
     period: "abr 2026 — atual",
     location: "Novo Hamburgo, RS",
-    bullets: ["Atuação como Analista de Dados Pleno em projetos corporativos."],
+    bullets: [
+      "Desenvolvimento de projetos de BI para Importação, Exportação, Suprimentos, Financeiro e demais áreas corporativas.",
+    ],
     current: true,
   },
   {
@@ -54,7 +56,7 @@ export function Experience() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 max-w-2xl">
           <p className="font-mono text-xs text-accent mb-4 tracking-widest uppercase">
-            03 — experiência
+            05 — experiência
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold">
             Uma trajetória <span className="text-gradient">orientada por dados</span>.

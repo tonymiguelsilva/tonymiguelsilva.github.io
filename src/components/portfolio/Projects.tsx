@@ -62,7 +62,7 @@ export function Projects() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 max-w-2xl">
           <p className="font-mono text-xs text-accent mb-4 tracking-widest uppercase">
-            03 — projetos
+            03 — projetos de BI
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold">
             Projetos selecionados em <span className="text-gradient">BI & Analytics</span>.

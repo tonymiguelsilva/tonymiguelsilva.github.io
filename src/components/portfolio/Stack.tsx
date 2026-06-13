@@ -34,7 +34,7 @@ export function Stack() {
             02 — stack
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold">
-            Ferramentas que <span className="text-gradient">uso todos os dias</span>.
+          Stack <span className="text-gradient">técnica</span>.
           </h2>
         </div>
 
