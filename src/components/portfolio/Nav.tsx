@@ -4,6 +4,7 @@ const links = [
   { href: "#sobre", label: "Sobre" },
   { href: "#stack", label: "Stack" },
   { href: "#projetos", label: "Projetos" },
+  { href: "#engenharia", label: "Eng. de Dados" },
   { href: "#experiencia", label: "Experiência" },
   { href: "#formacao", label: "Formação" },
   { href: "#contato", label: "Contato" },
@@ -26,7 +27,7 @@ export function Nav() {
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#top" className="font-display font-bold text-lg tracking-tight">
           <span className="text-gradient">tony</span>
-          <span className="text-muted-foreground font-mono text-sm">.dev</span>
+          <span className="text-muted-foreground font-mono text-sm">.data</span>
         </a>
         <ul className="hidden md:flex items-center gap-8 text-sm">
           {links.map((l) => (

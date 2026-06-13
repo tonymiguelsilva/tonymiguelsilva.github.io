@@ -48,7 +48,6 @@ export function Hero() {
           <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
             {[
               { v: "8+", l: "anos de experiência" },
-              { v: "20", l: "filiais geridas" },
               { v: "10+", l: "stacks dominadas" },
               { v: "∞", l: "queries SQL" },
             ].map((s) => (
