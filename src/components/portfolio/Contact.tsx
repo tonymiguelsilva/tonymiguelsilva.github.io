@@ -6,12 +6,11 @@ export function Contact() {
           08 — contato
         </p>
         <h2 className="text-5xl md:text-7xl font-display font-bold mb-8 leading-[1.05]">
-          Vamos construir <br />
-          <span className="text-gradient">algo com dados.</span>
+          Vamos <span className="text-gradient">trocar uma ideia</span>.
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-          Aberto a oportunidades em Engenharia de Dados, Analytics Engineering
-          e projetos de BI estratégico.
+          Curtiu algum projeto? Quer trocar uma ideia sobre dados, BI ou
+          engenharia analítica? Me chama.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">

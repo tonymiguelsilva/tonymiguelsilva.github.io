@@ -57,7 +57,7 @@ export function Education() {
             07 — idiomas
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-10">
-            Comunicação <span className="text-gradient">global</span>.
+            Idiomas em <span className="text-gradient">evolução</span>.
           </h2>
           <div className="space-y-3">
             {[
