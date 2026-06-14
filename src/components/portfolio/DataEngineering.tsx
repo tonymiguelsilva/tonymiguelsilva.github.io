@@ -89,15 +89,15 @@ export function DataEngineering() {
               key={p.title}
               className="group relative bg-gradient-card border border-border rounded-2xl overflow-hidden shadow-card hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >
-              <div className="relative aspect-video overflow-hidden border-b border-border bg-secondary">
+              <div className="relative aspect-video overflow-hidden border-b border-border bg-[#0b0f1a] flex items-center justify-center p-4">
                 <img
                   src={p.image}
                   alt={`Preview de ${p.title}`}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: "auto" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-                <span className="absolute top-3 left-3 font-mono text-[10px] px-2 py-1 rounded-md bg-background/80 backdrop-blur border border-border text-accent uppercase tracking-widest">
+                <span className="absolute top-3 left-3 font-mono text-[10px] px-2 py-1 rounded-md bg-background/80 backdrop-blur border border-border text-accent uppercase tracking-widest z-10">
                   {String(idx + 1).padStart(2, "0")} / {p.tag}
                 </span>
               </div>

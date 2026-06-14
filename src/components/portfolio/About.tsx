@@ -21,10 +21,8 @@ export function About() {
             Evoluí de BI tradicional para a construção de{" "}
             <span className="text-foreground">pipelines escaláveis, automação de cargas
             e arquitetura de dados moderna em cloud</span>. Tenho formação em Análise
-            de Dados e atualmente curso Engenharia de Dados.
-          </p>
-          <p className="text-base">
-            Em breve iniciarei também a formação de Engenheiro de Dados da{" "}
+            de Dados pela <span className="text-accent font-medium">Xperiun Data Analytics</span>{" "}
+            e atualmente curso Engenharia de Dados na{" "}
             <span className="text-accent font-medium">DSA — Data Science Academy</span>,
             reforçando o foco em ETL/ELT, orquestração, Data Warehouses e Data Lakes.
           </p>
