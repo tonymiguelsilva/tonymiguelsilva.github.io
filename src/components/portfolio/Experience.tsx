@@ -56,7 +56,7 @@ export function Experience() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 max-w-2xl">
           <p className="font-mono text-xs text-accent mb-4 tracking-widest uppercase">
-            05 — experiência
+            04 — experiência
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold">
             Uma trajetória <span className="text-gradient">orientada por dados</span>.

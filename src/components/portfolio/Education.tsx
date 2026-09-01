@@ -27,7 +27,7 @@ export function Education() {
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16">
         <div>
           <p className="font-mono text-xs text-accent mb-4 tracking-widest uppercase">
-            06 — formação
+            05 — formação
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-10">
             Aprendizado <span className="text-gradient">contínuo</span>.
@@ -54,7 +54,7 @@ export function Education() {
 
         <div>
           <p className="font-mono text-xs text-accent mb-4 tracking-widest uppercase">
-            07 — idiomas
+            06 — idiomas
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-10">
             Idiomas em <span className="text-gradient">evolução</span>.
