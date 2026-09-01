@@ -43,6 +43,14 @@ export function Hero() {
             >
               LinkedIn ↗
             </a>
+            <a
+              href="https://github.com/tonymiguelsilva"
+              target="_blank"
+              rel="noreferrer"
+              className="px-7 py-3.5 rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
+            >
+              GitHub ↗
+            </a>
           </div>
 
           <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
