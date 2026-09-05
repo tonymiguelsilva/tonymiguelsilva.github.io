@@ -22,9 +22,10 @@ export function About() {
             <span className="text-foreground">pipelines escaláveis, automação de cargas
             e arquitetura de dados moderna em cloud</span>. Tenho formação em Análise
             de Dados pela <span className="text-accent font-medium">Xperiun Data Analytics</span>{" "}
-            e atualmente curso Engenharia de Dados na{" "}
-            <span className="text-accent font-medium">DSA — Data Science Academy</span>,
-            reforçando o foco em ETL/ELT, orquestração, Data Warehouses e Data Lakes.
+            e atualmente curso na{" "}
+            <span className="text-accent font-medium">Jornada Dados</span>, com formação em
+            Análise, Engenharia de Dados e IA, reforçando o foco em ETL/ELT, orquestração,
+            Data Warehouses e Data Lakes.
           </p>
         </div>
       </div>
