@@ -109,6 +109,18 @@ export function DataEngineering() {
               </div>
             </article>
           ))}
+
+          <div className="group relative bg-gradient-card border border-dashed border-border rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center p-8 min-h-[320px]">
+            <span className="font-mono text-[10px] tracking-widest text-accent uppercase mb-4">
+              Em breve
+            </span>
+            <h3 className="font-display font-bold text-2xl leading-tight mb-3">
+              Mais projetos <span className="text-gradient">por aqui</span>.
+            </h3>
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
+              Novas arquiteturas com Databricks, GCP, Airflow, dbt e BigQuery estão em construção.
+            </p>
+          </div>
         </div>
       </div>
     </section>
