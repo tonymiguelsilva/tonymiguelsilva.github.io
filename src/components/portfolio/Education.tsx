@@ -1,13 +1,8 @@
 const education = [
   {
-    school: "DSA — Data Science Academy",
-    course: "Formação Engenheiro de Dados",
-    period: "2026 — 2028",
-  },
-  {
-    school: "Infinity Big Data",
-    course: "Formação em Engenharia de Dados",
-    period: "2025 — 2026",
+    school: "Jornada Dados",
+    course: "Formação em Análise, Engenharia de Dados e IA",
+    period: "Em andamento",
   },
   {
     school: "Xperiun",
