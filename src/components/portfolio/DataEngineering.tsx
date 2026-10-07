@@ -86,7 +86,7 @@ export function DataEngineering() {
                   className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
-                <span className="absolute bottom-3 right-3 font-mono text-[10px] px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90">
+                <span className="absolute bottom-3 right-3 font-mono text-[10px] px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity duration-300">
                   ver no GitHub ↗
                 </span>
               </a>
