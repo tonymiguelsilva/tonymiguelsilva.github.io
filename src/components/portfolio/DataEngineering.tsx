@@ -1,4 +1,5 @@
 import dwImg from "@/assets/projects/local-dw-architecture.jpg.asset.json";
+import gcpImg from "@/assets/projects/gcp-data-lake-cover.jpg.asset.json";
 
 const projects = [
   {
@@ -17,6 +18,35 @@ const projects = [
     stack: ["Python", "FastAPI", "Apache Airflow", "PostgreSQL", "dbt", "Power BI"],
     github: "https://github.com/tonymiguelsilva/projeto-arquitetura-local-dw",
     image: dwImg.url,
+  },
+  {
+    tag: "Data Warehouse · Cloud",
+    title: "Cloud Data Engineering — GCP",
+    description:
+      "Pipeline end-to-end de dados na Google Cloud. Parte de um banco PostgreSQL com ingestão incremental em Python, armazena arquivos Parquet no Google Cloud Storage e carrega o Data Warehouse no BigQuery, com transformação e modelagem em dbt nas camadas Bronze, Silver e Gold. Orquestração com Apache Airflow.",
+    highlights: [
+      "Pipeline de dados end-to-end",
+      "Ingestão incremental com watermark",
+      "Arquivos Parquet no GCS",
+      "Arquitetura Bronze, Silver e Gold",
+      "Modelagem dimensional",
+      "Data Quality com 20 testes",
+      "Particionamento e clustering no BigQuery",
+      "Integração com API externa",
+      "Notificações automáticas",
+    ],
+    stack: [
+      "Python",
+      "PostgreSQL",
+      "Apache Airflow",
+      "GCS",
+      "BigQuery",
+      "dbt",
+      "Docker",
+      "Google Cloud",
+    ],
+    github: "https://github.com/tonymiguelsilva/projeto-cloud-gcp-data-engineering",
+    image: gcpImg.url,
   },
 ];
 
@@ -56,7 +86,7 @@ export function DataEngineering() {
                   className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
-                <span className="absolute bottom-3 right-3 font-mono text-[10px] px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90">
+                <span className="absolute bottom-3 right-3 font-mono text-[10px] px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity duration-300">
                   ver no GitHub ↗
                 </span>
               </a>
@@ -110,7 +140,7 @@ export function DataEngineering() {
             </article>
           ))}
 
-          <div className="group relative bg-gradient-card border border-dashed border-border rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center p-8 min-h-[320px]">
+          <div className="group relative lg:col-span-2 bg-gradient-card border border-dashed border-border rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center p-8 min-h-[180px]">
             <span className="font-mono text-[10px] tracking-widest text-accent uppercase mb-4">
               Em breve
             </span>
