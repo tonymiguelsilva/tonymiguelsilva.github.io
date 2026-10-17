@@ -16,6 +16,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Portfólio de Tony Miguel da Silva — Analytics Engineer, BI e Engenharia de Dados. Power BI, SQL, Python, dbt, Airflow, Databricks, Cloud." },
       { property: "og:title", content: "Tony Miguel da Silva — Analytics & Data Engineer" },
       { property: "og:description", content: "Pipelines de dados, dashboards estratégicos e arquitetura moderna em cloud." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Index,
