@@ -1,7 +1,23 @@
 import dwImg from "@/assets/projects/local-dw-architecture.jpg.asset.json";
 import gcpImg from "@/assets/projects/gcp-data-lake-cover.jpg.asset.json";
+import dataclyraImg from "@/assets/projects/dataclyra-visao-geral.png.asset.json";
+import { ExternalLink, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const projects = [
+type EngineeringProject = {
+  tag: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  highlights: string[];
+  stack: string[];
+  github: string;
+  image: string;
+  platform?: string;
+  screenshots?: { image: string; label: string }[];
+};
+
+const projects: EngineeringProject[] = [
   {
     tag: "Data Warehouse · Local",
     title: "Local Data Warehouse Architecture",
@@ -48,6 +64,25 @@ const projects = [
     github: "https://github.com/tonymiguelsilva/projeto-cloud-gcp-data-engineering",
     image: gcpImg.url,
   },
+  {
+    tag: "Analytics · Plataforma Web",
+    title: "DataClyra Analytics Platform",
+    subtitle: "Dos pipelines de dados a uma solução analítica integrada.",
+    description:
+      "Plataforma web de Analytics que reúne dashboards, indicadores, Central de Qualidade, Catálogo de Dados, Linhagem e um assistente analítico demonstrativo. Uma evolução dos estudos em Engenharia de Dados para a exploração e apresentação de informações, com dados demonstrativos.",
+    highlights: [
+      "Desenvolvimento full stack, do backend à interface web",
+      "Recursos para exploração e acompanhamento dos dados",
+      "Qualidade, catálogo e linhagem demonstrativos",
+      "Assistente analítico com respostas determinísticas, sem API externa de IA",
+      "Arquitetura voltada à autonomia, sem custos recorrentes obrigatórios de infraestrutura",
+    ],
+    stack: ["Python", "FastAPI", "React", "TypeScript", "Docker", "Git", "GitHub", "Render"],
+    github: "https://github.com/tonymiguelsilva/projeto-portal-analytics",
+    platform: "https://dataclyra-analytics.onrender.com/",
+    image: dataclyraImg.url,
+    screenshots: [],
+  },
 ];
 
 export function DataEngineering() {
@@ -73,21 +108,23 @@ export function DataEngineering() {
               className="group relative bg-gradient-card border border-border rounded-2xl overflow-hidden shadow-card hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >
               <a
-                href={p.github}
+                href={p.platform ?? p.github}
                 target="_blank"
                 rel="noreferrer"
                 className="relative block aspect-video overflow-hidden bg-secondary border-b border-border"
-                aria-label={`Abrir ${p.title} no GitHub`}
+                aria-label={p.platform ? `Acessar ${p.title}` : `Abrir ${p.title} no GitHub`}
               >
                 <img
                   src={p.image}
-                  alt={`Arquitetura do ${p.title}`}
+                  alt={p.platform ? `Visão geral da ${p.title} com indicadores e gráfico de faturamento demonstrativos` : `Arquitetura do ${p.title}`}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className={p.platform
+                    ? "absolute inset-0 w-full h-full object-contain object-center"
+                    : "absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
                 <span className="absolute bottom-3 right-3 font-mono text-[10px] px-2.5 py-1.5 rounded-md bg-background/80 backdrop-blur border border-border text-foreground/90 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity duration-300">
-                  ver no GitHub ↗
+                  {p.platform ? "acessar plataforma ↗" : "ver no GitHub ↗"}
                 </span>
               </a>
 
@@ -101,7 +138,20 @@ export function DataEngineering() {
                 <h3 className="font-display font-bold text-2xl leading-tight mb-3 group-hover:text-gradient transition-all">
                   {p.title}
                 </h3>
+                {p.subtitle && (
+                  <p className="text-sm text-accent mb-4 leading-relaxed">{p.subtitle}</p>
+                )}
                 <p className="text-sm text-foreground/80 mb-6 leading-relaxed">{p.description}</p>
+
+                {p.screenshots && p.screenshots.length > 0 && (
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {p.screenshots.map((screenshot) => (
+                      <a key={screenshot.image} href={screenshot.image} target="_blank" rel="noreferrer" aria-label={`Ampliar ${screenshot.label}`}>
+                        <img src={screenshot.image} alt={screenshot.label} loading="lazy" className="w-full aspect-video object-contain rounded-md border border-border bg-secondary" />
+                      </a>
+                    ))}
+                  </div>
+                )}
 
                 <ul className="space-y-2 mb-6 text-sm">
                   {p.highlights.map((h) => (
@@ -123,6 +173,20 @@ export function DataEngineering() {
                   ))}
                 </div>
 
+                {p.platform ? (
+                  <div className="mt-auto pt-5 border-t border-border/60 flex flex-wrap gap-3">
+                    <Button asChild size="sm" className="h-auto min-h-9 whitespace-normal py-2">
+                      <a href={p.platform} target="_blank" rel="noreferrer">
+                        <ExternalLink aria-hidden="true" /> Acessar plataforma
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" size="sm" className="h-auto min-h-9 whitespace-normal py-2">
+                      <a href={p.github} target="_blank" rel="noreferrer">
+                        <Github aria-hidden="true" /> Ver código no GitHub
+                      </a>
+                    </Button>
+                  </div>
+                ) : (
                 <div className="mt-auto pt-5 border-t border-border/60 flex items-center justify-between">
                   <span className="font-mono text-[10px] text-muted-foreground">
                     Repositório público
@@ -136,6 +200,7 @@ export function DataEngineering() {
                     GitHub →
                   </a>
                 </div>
+                )}
               </div>
             </article>
           ))}

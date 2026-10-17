@@ -1,0 +1,3 @@
+- [x] Add DataClyra to Engineering projects with its real screenshot, supplied content and both links.
+- [x] Prepare optional complementary screenshots without empty visible placeholders.
+- [x] Verify desktop/mobile display, image loading and existing project links.
