@@ -3,6 +3,7 @@ import gcpImg from "@/assets/projects/gcp-data-lake-cover.jpg.asset.json";
 import dataclyraImg from "@/assets/projects/dataclyra-visao-geral.png.asset.json";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FarolCard } from "./FarolCard";
 
 type EngineeringProject = {
   tag: string;
@@ -204,6 +205,8 @@ export function DataEngineering() {
               </div>
             </article>
           ))}
+
+          <FarolCard />
 
           <div className="group relative lg:col-span-2 bg-gradient-card border border-dashed border-border rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center p-8 min-h-[180px]">
             <span className="font-mono text-[10px] tracking-widest text-accent uppercase mb-4">

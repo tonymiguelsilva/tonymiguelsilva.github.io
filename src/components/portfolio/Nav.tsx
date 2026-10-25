@@ -10,7 +10,7 @@ const links = [
   { href: "#contato", label: "Contato" },
 ];
 
-export function Nav() {
+export function Nav({ sectionBase = "" }: { sectionBase?: string }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -25,7 +25,7 @@ export function Nav() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="font-display font-bold text-lg tracking-tight">
+        <a href={`${sectionBase}#top`} className="font-display font-bold text-lg tracking-tight">
           <span className="text-gradient">tony</span>
           <span className="text-muted-foreground font-mono text-sm">.data</span>
         </a>
@@ -33,7 +33,7 @@ export function Nav() {
           {links.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
+                href={`${sectionBase}${l.href}`}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {l.label}
