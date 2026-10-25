@@ -176,6 +176,7 @@
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .shadow-card { box-shadow: var(--shadow-card); }
   .font-mono { font-family: var(--font-mono); }
+  .farol-page h1, .farol-page h2, .farol-page h3, .farol-page h4 { letter-spacing: 0; }
 
   @keyframes float {
     0%, 100% { transform: translateY(0); }
