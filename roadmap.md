@@ -2,3 +2,6 @@
 - [x] Prepare optional complementary screenshots without empty visible placeholders.
 - [x] Verify desktop/mobile display, image loading and existing project links.
 - [x] Add the brand favicon (t. lettermark) and declare it in the root route head.
+- [ ] Add Farol portfolio card and integrated case-study page with all supplied content.
+- [ ] Prepare four real-image placeholders and hideable repository link.
+- [ ] Verify navigation, content and desktop/mobile layout.
