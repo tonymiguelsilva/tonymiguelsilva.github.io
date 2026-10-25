@@ -17,7 +17,7 @@ export function FarolArchitecture({ compact = false }: { compact?: boolean }) {
           <div className={compact ? "text-center" : "border-t-2 border-primary pt-5"}>
             <stage.icon aria-hidden="true" className={compact ? "size-7 mx-auto mb-3 text-accent" : "size-6 mb-4 text-accent"} />
             <p className={compact ? "font-mono text-xs text-foreground" : "font-display font-semibold text-base"}>{stage.label}</p>
-            {!compact && <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{stage.detail}</p>}
+            {!compact && "detail" in stage && <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{stage.detail}</p>}
           </div>
           {compact && index < stages.length - 1 && <ArrowRight aria-hidden="true" className="size-4 shrink-0 text-muted-foreground" />}
           {!compact && index < stages.length - 1 && <ArrowDown aria-hidden="true" className="size-4 text-primary mt-4 md:hidden" />}
