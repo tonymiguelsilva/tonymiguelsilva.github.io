@@ -5,3 +5,6 @@
 - [x] Add Farol portfolio card and integrated case-study page with all supplied content.
 - [x] Prepare four real-image placeholders and hideable repository link.
 - [x] Verify navigation, content and desktop/mobile layout.
+- [ ] Update the three existing engineering cards, preserving covers and platform links.
+- [ ] Add integrated Local DW, GCP and DataClyra case pages from supplied briefs.
+- [ ] Test documented quality values and verify navigation across screen sizes.

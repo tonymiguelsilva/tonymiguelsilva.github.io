@@ -10,11 +10,30 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjetosArquiteturaLocalDwRouteImport } from './routes/projetos.arquitetura-local-dw'
+import { Route as ProjetosCloudGcpRouteImport } from './routes/projetos.cloud-gcp'
+import { Route as ProjetosDataclyraRouteImport } from './routes/projetos.dataclyra'
 import { Route as ProjetosFarolRouteImport } from './routes/projetos.farol'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosArquiteturaLocalDwRoute =
+  ProjetosArquiteturaLocalDwRouteImport.update({
+    id: '/projetos/arquitetura-local-dw',
+    path: '/projetos/arquitetura-local-dw',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjetosCloudGcpRoute = ProjetosCloudGcpRouteImport.update({
+  id: '/projetos/cloud-gcp',
+  path: '/projetos/cloud-gcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosDataclyraRoute = ProjetosDataclyraRouteImport.update({
+  id: '/projetos/dataclyra',
+  path: '/projetos/dataclyra',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjetosFarolRoute = ProjetosFarolRouteImport.update({
@@ -25,27 +44,55 @@ const ProjetosFarolRoute = ProjetosFarolRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/projetos/arquitetura-local-dw': typeof ProjetosArquiteturaLocalDwRoute
+  '/projetos/cloud-gcp': typeof ProjetosCloudGcpRoute
+  '/projetos/dataclyra': typeof ProjetosDataclyraRoute
   '/projetos/farol': typeof ProjetosFarolRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/projetos/arquitetura-local-dw': typeof ProjetosArquiteturaLocalDwRoute
+  '/projetos/cloud-gcp': typeof ProjetosCloudGcpRoute
+  '/projetos/dataclyra': typeof ProjetosDataclyraRoute
   '/projetos/farol': typeof ProjetosFarolRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/projetos/arquitetura-local-dw': typeof ProjetosArquiteturaLocalDwRoute
+  '/projetos/cloud-gcp': typeof ProjetosCloudGcpRoute
+  '/projetos/dataclyra': typeof ProjetosDataclyraRoute
   '/projetos/farol': typeof ProjetosFarolRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projetos/farol'
+  fullPaths:
+    | '/'
+    | '/projetos/arquitetura-local-dw'
+    | '/projetos/cloud-gcp'
+    | '/projetos/dataclyra'
+    | '/projetos/farol'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projetos/farol'
-  id: '__root__' | '/' | '/projetos/farol'
+  to:
+    | '/'
+    | '/projetos/arquitetura-local-dw'
+    | '/projetos/cloud-gcp'
+    | '/projetos/dataclyra'
+    | '/projetos/farol'
+  id:
+    | '__root__'
+    | '/'
+    | '/projetos/arquitetura-local-dw'
+    | '/projetos/cloud-gcp'
+    | '/projetos/dataclyra'
+    | '/projetos/farol'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProjetosArquiteturaLocalDwRoute: typeof ProjetosArquiteturaLocalDwRoute
+  ProjetosCloudGcpRoute: typeof ProjetosCloudGcpRoute
+  ProjetosDataclyraRoute: typeof ProjetosDataclyraRoute
   ProjetosFarolRoute: typeof ProjetosFarolRoute
 }
 
@@ -56,6 +103,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/arquitetura-local-dw': {
+      id: '/projetos/arquitetura-local-dw'
+      path: '/projetos/arquitetura-local-dw'
+      fullPath: '/projetos/arquitetura-local-dw'
+      preLoaderRoute: typeof ProjetosArquiteturaLocalDwRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/cloud-gcp': {
+      id: '/projetos/cloud-gcp'
+      path: '/projetos/cloud-gcp'
+      fullPath: '/projetos/cloud-gcp'
+      preLoaderRoute: typeof ProjetosCloudGcpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/dataclyra': {
+      id: '/projetos/dataclyra'
+      path: '/projetos/dataclyra'
+      fullPath: '/projetos/dataclyra'
+      preLoaderRoute: typeof ProjetosDataclyraRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projetos/farol': {
@@ -70,6 +138,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProjetosArquiteturaLocalDwRoute: ProjetosArquiteturaLocalDwRoute,
+  ProjetosCloudGcpRoute: ProjetosCloudGcpRoute,
+  ProjetosDataclyraRoute: ProjetosDataclyraRoute,
   ProjetosFarolRoute: ProjetosFarolRoute,
 }
 export const routeTree = rootRouteImport
