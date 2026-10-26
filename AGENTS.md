@@ -5,6 +5,7 @@
 - Overlay badges on card artwork must be hover-revealed rather than always visible, because the project diagrams carry text right up to their edges and a permanent pill truncates it.
 - Engineering project cards support optional platform links and complementary screenshot arrays, so web applications can be included without changing existing repository-only cards.
 - Case studies use dedicated content routes; Farol presentation data, repository visibility and optional CDN media URLs live in a shared browser-safe module so the card and case page stay consistent.
+- Local DW, GCP and DataClyra use dedicated case routes with a shared browser-safe content module and page shell, keeping documented values and portfolio summaries consistent without duplicating layouts.
 - Shared portfolio navigation accepts a section base URL for case pages, preserving the existing single-page portfolio links and shared contact/footer.
 - The browser-tab icon is the `t.` lettermark in `public/favicon.svg`, built from the same brand tokens as the nav wordmark, with `favicon.png` / `apple-touch-icon.png` rasterized from it and declared in `head().links` of `src/routes/__root.tsx`, because the tab mark must stay crisp at 16px and never drift from the site's visual identity.
 

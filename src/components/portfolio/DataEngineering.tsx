@@ -4,8 +4,11 @@ import dataclyraImg from "@/assets/projects/dataclyra-visao-geral.png.asset.json
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FarolCard } from "./FarolCard";
+import { Link } from "@tanstack/react-router";
+import { localCase, cloudCase, dataclyraCase } from "@/lib/engineering-cases";
 
 type EngineeringProject = {
+  casePath: "/projetos/arquitetura-local-dw" | "/projetos/cloud-gcp" | "/projetos/dataclyra";
   tag: string;
   title: string;
   subtitle?: string;
@@ -20,10 +23,10 @@ type EngineeringProject = {
 
 const projects: EngineeringProject[] = [
   {
+    casePath: "/projetos/arquitetura-local-dw",
     tag: "Data Warehouse · Local",
-    title: "Local Data Warehouse Architecture",
-    description:
-      "Projeto completo de Engenharia de Dados Local desenvolvido para simular um ambiente real de Data Warehouse — desde a ingestão de dados via API até a camada analítica em Power BI.",
+    title: localCase.title,
+    description: localCase.summary,
     highlights: [
       "Ingestão de dados com Python e FastAPI",
       "Orquestração de pipelines com Apache Airflow",
@@ -37,10 +40,10 @@ const projects: EngineeringProject[] = [
     image: dwImg.url,
   },
   {
+    casePath: "/projetos/cloud-gcp",
     tag: "Data Warehouse · Cloud",
     title: "Cloud Data Engineering — GCP",
-    description:
-      "Pipeline end-to-end de dados na Google Cloud. Parte de um banco PostgreSQL com ingestão incremental em Python, armazena arquivos Parquet no Google Cloud Storage e carrega o Data Warehouse no BigQuery, com transformação e modelagem em dbt nas camadas Bronze, Silver e Gold. Orquestração com Apache Airflow.",
+    description: cloudCase.summary,
     highlights: [
       "Pipeline de dados end-to-end",
       "Ingestão incremental com watermark",
@@ -66,11 +69,11 @@ const projects: EngineeringProject[] = [
     image: gcpImg.url,
   },
   {
+    casePath: "/projetos/dataclyra",
     tag: "Analytics · Plataforma Web",
-    title: "DataClyra Analytics Platform",
+    title: dataclyraCase.title,
     subtitle: "Dos pipelines de dados a uma solução analítica integrada.",
-    description:
-      "Plataforma web de Analytics que reúne dashboards, indicadores, Central de Qualidade, Catálogo de Dados, Linhagem e um assistente analítico demonstrativo. Uma evolução dos estudos em Engenharia de Dados para a exploração e apresentação de informações, com dados demonstrativos.",
+    description: dataclyraCase.summary,
     highlights: [
       "Desenvolvimento full stack, do backend à interface web",
       "Recursos para exploração e acompanhamento dos dados",
@@ -174,34 +177,23 @@ export function DataEngineering() {
                   ))}
                 </div>
 
-                {p.platform ? (
-                  <div className="mt-auto pt-5 border-t border-border/60 flex flex-wrap gap-3">
+                <div className="mt-auto pt-5 border-t border-border/60 flex flex-wrap gap-3">
+                  <Button asChild size="sm" className="h-auto min-h-9 whitespace-normal py-2">
+                    <Link to={p.casePath}>Conhecer projeto <ExternalLink aria-hidden="true" /></Link>
+                  </Button>
+                  {p.platform && (
                     <Button asChild size="sm" className="h-auto min-h-9 whitespace-normal py-2">
                       <a href={p.platform} target="_blank" rel="noreferrer">
                         <ExternalLink aria-hidden="true" /> Acessar plataforma
                       </a>
                     </Button>
+                  )}
                     <Button asChild variant="outline" size="sm" className="h-auto min-h-9 whitespace-normal py-2">
                       <a href={p.github} target="_blank" rel="noreferrer">
                         <Github aria-hidden="true" /> Ver código no GitHub
                       </a>
                     </Button>
-                  </div>
-                ) : (
-                <div className="mt-auto pt-5 border-t border-border/60 flex items-center justify-between">
-                  <span className="font-mono text-[10px] text-muted-foreground">
-                    Repositório público
-                  </span>
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs font-mono text-accent hover:text-primary transition-colors inline-flex items-center gap-1"
-                  >
-                    GitHub →
-                  </a>
                 </div>
-                )}
               </div>
             </article>
           ))}
