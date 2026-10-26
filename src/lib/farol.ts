@@ -3,8 +3,8 @@ export const farol = {
   subtitle: "Torre de Controle de Projetos no Databricks",
   summary: "Plataforma Lakehouse que integra dados de projetos, custos, pessoas e fornecedores para identificar riscos, prever desvios e apoiar decisões executivas.",
   repository: "https://github.com/tonymiguelsilva/projeto_databricks",
-  // Enable when the repository is ready to be shared publicly.
-  showRepository: false,
+  // Flip to false again if the repository goes private.
+  showRepository: true,
   simulation: { seed: 42, referenceDate: "16/10/2026" },
   falseGreenSpiThreshold: 0.90,
   numbers: [
