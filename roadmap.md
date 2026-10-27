@@ -8,3 +8,6 @@
 - [x] Update the three existing engineering cards, preserving covers and platform links.
 - [x] Add integrated Local DW, GCP and DataClyra case pages from supplied briefs.
 - [x] Test documented quality values and verify navigation across screen sizes.
+
+- [ ] Farol: substituir 4 placeholders da galeria por imagens enviadas (com ampliação)
+- [ ] Reverter formulário de e-mail para links anteriores
