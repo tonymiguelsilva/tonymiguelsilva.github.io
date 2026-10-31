@@ -72,8 +72,8 @@ function FarolPage() {
       </figure>
 
       <nav aria-label="Navegação do Projeto Farol" className="sticky top-16 z-40 border-y border-border bg-background/95 backdrop-blur-xl">
-        <div className="max-w-6xl mx-auto px-6 overflow-x-auto">
-          <ul className="flex min-w-max gap-1 py-2">
+        <div className="case-nav-scroll max-w-6xl mx-auto px-6 overflow-x-auto md:overflow-visible">
+          <ul className="flex min-w-max gap-1 py-2 md:min-w-0 md:flex-wrap md:justify-center">
             {farolSections.map(([number, label]) => <li key={number}><a href={`#farol-${number}`} className="inline-flex min-h-10 items-center rounded-md px-3 text-xs font-mono text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors">{number} {label}</a></li>)}
           </ul>
         </div>

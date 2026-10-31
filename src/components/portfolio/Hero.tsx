@@ -53,11 +53,10 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-20 grid grid-cols-3 gap-6 max-w-2xl">
+          <div className="mt-20 grid grid-cols-2 gap-6 max-w-md">
             {[
               { v: "8+", l: "anos de experiência" },
               { v: "7", l: "projetos selecionados" },
-              { v: "34", l: "testes de qualidade" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="text-3xl font-display font-bold text-gradient">{s.v}</div>

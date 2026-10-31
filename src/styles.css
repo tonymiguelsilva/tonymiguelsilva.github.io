@@ -4,6 +4,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.case-nav-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.case-nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 /*
  * Design system definition.
  *

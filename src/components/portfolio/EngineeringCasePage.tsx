@@ -23,8 +23,8 @@ export function EngineeringCasePage({ project }: { project: EngineeringCase }) {
    <a href={project.image} target="_blank" rel="noreferrer" aria-label={`Ampliar capa de ${project.title}`} className="block focus-visible:ring-2 focus-visible:ring-ring"><img src={project.image} alt={project.imageAlt} className="w-full h-auto border border-border rounded-lg" /></a>
   </figure>
   <nav aria-label="Navegação deste projeto" className="sticky top-16 z-40 border-y border-border bg-background/95 backdrop-blur-xl">
-   <div className="max-w-6xl mx-auto px-6 overflow-x-auto">
-    <ul className="flex min-w-max gap-1 py-2">
+   <div className="case-nav-scroll max-w-6xl mx-auto px-6 overflow-x-auto md:overflow-visible">
+    <ul className="flex min-w-max gap-1 py-2 md:min-w-0 md:flex-wrap md:justify-center">
      {project.sections.map((section, index) => <li key={section.label}><a href={`#case-section-${index + 1}`} className="inline-flex min-h-10 items-center rounded-md px-3 text-xs font-mono text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors">{String(index + 1).padStart(2, '0')} {section.label}</a></li>)}
     </ul>
    </div>
