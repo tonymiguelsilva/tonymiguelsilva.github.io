@@ -1,13 +1,23 @@
 import localCoverUrl from '@/assets/projects/local-dw-architecture.jpg';
 import cloudCoverUrl from '@/assets/projects/gcp-data-lake-cover.jpg';
 import dataCoverUrl from '@/assets/projects/dataclyra-visao-geral.png';
+import localAirflow from '@/assets/projects/local-dw/airflow.jpg';
+import localDbeaver from '@/assets/projects/local-dw/dbeaver.jpg';
+import localDbtLineage from '@/assets/projects/local-dw/dbt-lineage.jpg';
+import cloudBigQuery from '@/assets/projects/cloud-gcp/bigquery.jpg';
+import cloudDbtLineage from '@/assets/projects/cloud-gcp/dbt-lineage.jpg';
+import dataclyraComercial from '@/assets/projects/dataclyra/comercial.jpg';
+import dataclyraLineage from '@/assets/projects/dataclyra/linhagem-dados.jpg';
+import dataclyraOperacional from '@/assets/projects/dataclyra/operacional.jpg';
+import dataclyraAssistant from '@/assets/projects/dataclyra/assistente-ia.jpg';
 
 const localCover = { url: localCoverUrl };
 const cloudCover = { url: cloudCoverUrl };
 const dataCover = { url: dataCoverUrl };
 
 export type CaseSection = { label: string; title: string; paragraphs?: string[]; items?: { title: string; text: string }[]; flow?: string[]; note?: string };
-export type EngineeringCase = { title: string; category: string; summary: string; image: string; imageAlt: string; repository: string; platform?: string; stack: string[]; sections: CaseSection[] };
+export type CaseMedia = { image: string; alt: string; caption: string };
+export type EngineeringCase = { title: string; category: string; summary: string; image: string; imageAlt: string; repository: string; platform?: string; stack: string[]; gallery?: CaseMedia[]; sections: CaseSection[] };
 export const localQuality = { tests: 14, pass: 14, warn: 0, error: 0 };
 export const cloudValidation = { orders: 5000, orderItems: 15078, clients: 500, products: 100, tests: 20, pass: 20, warn: 0, error: 0, skip: 0, reconciledAmount: 110682385.35, difference: 0, models: 12, sources: 6 };
 
@@ -16,6 +26,11 @@ export const localCase: EngineeringCase = {
  summary: 'Arquitetura local de Data Warehouse com ingestão via API REST, orquestração com Airflow, armazenamento PostgreSQL e transformação com dbt nas camadas Bronze, Silver e Gold.',
  image: localCover.url, imageAlt: 'Diagrama original da arquitetura local de Data Warehouse', repository: 'https://github.com/tonymiguelsilva/projeto-arquitetura-local-dw',
  stack: ['Python', 'FastAPI', 'Apache Airflow', 'PostgreSQL', 'dbt Core', 'Docker', 'DBeaver', 'Power BI', 'Git'],
+ gallery: [
+  { image: localAirflow, alt: 'Pipeline dw_pipeline executado com sucesso no Apache Airflow', caption: 'Orquestração do pipeline no Apache Airflow' },
+  { image: localDbeaver, alt: 'Modelo analítico da camada Gold visualizado no DBeaver', caption: 'Camada Gold e modelo analítico no DBeaver' },
+  { image: localDbtLineage, alt: 'Grafo de linhagem dos modelos do Data Warehouse local no dbt', caption: 'Linhagem dos modelos Bronze, Silver e Gold no dbt' },
+ ],
  sections: [
   { label: 'Visão geral', title: 'Uma arquitetura completa, em ambiente local.', paragraphs: ['O projeto aplica uma arquitetura de Data Warehouse local com Docker, Apache Airflow, PostgreSQL, dbt e uma API REST. A ingestão, a transformação e a validação formam uma base organizada para o consumo analítico.'] },
   { label: 'Arquitetura', title: 'Da API à camada analítica.', flow: ['API REST', 'Apache Airflow', 'PostgreSQL', 'dbt', 'Bronze', 'Silver', 'Gold', 'Power BI'], note: 'O dbt separa os ambientes de desenvolvimento e produção por targets. O Airflow executa as transformações no ambiente PROD.' },
@@ -48,6 +63,10 @@ export const cloudCase: EngineeringCase = {
  summary: 'Pipeline end-to-end de Engenharia de Dados em nuvem, da extração incremental em PostgreSQL à modelagem analítica no BigQuery, com GCS, Airflow, dbt e testes de qualidade.',
  image: cloudCover.url, imageAlt: 'Capa original do pipeline Cloud Data Engineering na GCP', repository: 'https://github.com/tonymiguelsilva/projeto-cloud-gcp-data-engineering',
  stack: ['Python', 'PostgreSQL 16', 'Google Cloud Storage', 'BigQuery', 'dbt Core', 'Apache Airflow', 'Docker', 'GCP', 'Open-Meteo', 'Parquet', 'Git', 'GitHub'],
+ gallery: [
+  { image: cloudBigQuery, alt: 'Tabela fato_vendas da camada Gold aberta no Google BigQuery', caption: 'Dados da camada Gold no Google BigQuery' },
+  { image: cloudDbtLineage, alt: 'Grafo de linhagem dos modelos dbt executados na Google Cloud', caption: 'Linhagem dos modelos dbt na arquitetura GCP' },
+ ],
  sections: [
   { label: 'Problema e objetivo', title: 'Do transacional ao analítico, na nuvem.', paragraphs: ['O projeto simula um ambiente corporativo de ingestão, transformação, qualidade e disponibilização de dados em nuvem. O fluxo parte de um banco transacional PostgreSQL e chega a um Data Warehouse analítico no BigQuery.'] },
   { label: 'Arquitetura', title: 'Extração incremental. Modelagem analítica.', flow: ['PostgreSQL OLTP', 'Python · extração incremental', 'Google Cloud Storage · Parquet', 'BigQuery Bronze', 'dbt Silver', 'dbt Gold', 'Consumo analítico / BI'], note: 'Apache Airflow orquestra as etapas, da extração às validações e notificações.' },
@@ -82,6 +101,12 @@ export const dataclyraCase: EngineeringCase = {
  summary: 'Plataforma web de analytics para explorar indicadores comerciais e operacionais com dashboards, filtros, qualidade, linhagem de dados e recursos demonstrativos de apoio à análise.',
  image: dataCover.url, imageAlt: 'Captura real da visão geral da DataClyra com indicadores demonstrativos', repository: 'https://github.com/tonymiguelsilva/projeto-portal-analytics', platform: 'https://dataclyra-analytics.onrender.com/',
  stack: ['React 19', 'TypeScript', 'Vite', 'Recharts', 'Lucide React', 'Python 3', 'FastAPI', 'Pydantic', 'Uvicorn', 'CSV', 'Docker', 'ESLint', 'unittest'],
+ gallery: [
+  { image: dataclyraComercial, alt: 'Painel comercial da DataClyra com indicadores e faturamento por região', caption: 'Painel comercial e faturamento por região' },
+  { image: dataclyraOperacional, alt: 'Painel operacional da DataClyra com indicadores de pedidos e entregas', caption: 'Controle operacional de pedidos e entregas' },
+  { image: dataclyraLineage, alt: 'Tela de linhagem dos dados da plataforma DataClyra', caption: 'Linhagem dos dados, da origem às visualizações' },
+  { image: dataclyraAssistant, alt: 'Assistente analítico demonstrativo da DataClyra respondendo sobre faturamento', caption: 'Assistente analítico com respostas determinísticas' },
+ ],
  sections: [
   { label: 'Visão geral', title: 'Métricas em uma experiência integrada.', paragraphs: ['A DataClyra é uma plataforma web responsiva para explorar indicadores comerciais e operacionais. Demonstra métricas de negócio com regras de cálculo explícitas, filtros consistentes e escopo regional por perfil Demo.', 'Visualizações, filtros, governança de dados e recursos de apoio à análise se conectam em um produto analítico demonstrativo, sem dados empresariais reais.'] },
   { label: 'Funcionalidades', title: 'Do indicador à exploração do recorte.', items: [

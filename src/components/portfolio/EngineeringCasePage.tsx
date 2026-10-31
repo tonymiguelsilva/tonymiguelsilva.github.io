@@ -22,6 +22,24 @@ export function EngineeringCasePage({ project }: { project: EngineeringCase }) {
   <figure className="max-w-6xl mx-auto px-6 pb-16">
    <a href={project.image} target="_blank" rel="noreferrer" aria-label={`Ampliar capa de ${project.title}`} className="block focus-visible:ring-2 focus-visible:ring-ring"><img src={project.image} alt={project.imageAlt} className="w-full h-auto border border-border rounded-lg" /></a>
   </figure>
+  {project.gallery && project.gallery.length > 0 && <section className="border-t border-border py-16 md:py-20">
+   <div className="max-w-6xl mx-auto px-6">
+    <p className="font-mono text-xs text-accent uppercase mb-4">Projeto em execução</p>
+    <h2 className="font-display font-bold text-3xl md:text-4xl mb-4 leading-tight">Detalhes da implementação.</h2>
+    <p className="text-muted-foreground leading-relaxed max-w-2xl mb-10">Capturas reais das ferramentas, modelos e interfaces desenvolvidas no projeto.</p>
+    <div className="grid md:grid-cols-2 gap-8">
+     {project.gallery.map(media => <figure key={media.image} className="min-w-0">
+      <a href={media.image} target="_blank" rel="noreferrer" aria-label={`Ampliar: ${media.caption}`} className="group block aspect-[16/10] overflow-hidden rounded-lg border border-border bg-secondary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+       <img src={media.image} alt={media.alt} loading="lazy" className="size-full object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
+      </a>
+      <figcaption className="mt-3 flex items-start justify-between gap-4 text-sm text-muted-foreground">
+       <span>{media.caption}</span>
+       <ExternalLink aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+      </figcaption>
+     </figure>)}
+    </div>
+   </div>
+  </section>}
   {project.sections.map((section, i) => <section key={section.label} className={`py-16 md:py-20 border-t border-border ${i % 2 ? 'bg-secondary/20' : ''}`}>
    <div className="max-w-6xl mx-auto px-6">
     <p className="font-mono text-xs text-accent uppercase mb-4">{String(i + 1).padStart(2, '0')} — {section.label}</p>
