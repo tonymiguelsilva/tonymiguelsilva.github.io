@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -10,7 +11,7 @@ const links = [
   { href: "#contato", label: "Contato" },
 ];
 
-export function Nav({ sectionBase = "" }: { sectionBase?: string }) {
+export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -25,19 +26,20 @@ export function Nav({ sectionBase = "" }: { sectionBase?: string }) {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href={`${sectionBase}#top`} className="font-display font-bold text-lg tracking-tight">
+        <Link to="/" hash="top" className="font-display font-bold text-lg tracking-tight">
           <span className="text-gradient">tony</span>
           <span className="text-muted-foreground font-mono text-sm">.data</span>
-        </a>
+        </Link>
         <ul className="hidden md:flex items-center gap-8 text-sm">
           {links.map((l) => (
             <li key={l.href}>
-              <a
-                href={`${sectionBase}${l.href}`}
+              <Link
+                to="/"
+                hash={l.href.slice(1)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

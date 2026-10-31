@@ -1,5 +1,4 @@
-/// <reference types="bun" />
-import { expect, test } from 'bun:test';
+import { expect, test } from 'vitest';
 import { cloudValidation, localQuality, dataclyraCase } from './engineering-cases';
 
 test('Local PROD has 14 passing tests with no warnings or errors', () => {

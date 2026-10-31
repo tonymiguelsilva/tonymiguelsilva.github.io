@@ -1,28 +1,40 @@
-# Tony Miguel's Portfolio
+# Portfolio Tony Miguel
 
-quero que crie um portfólio para mim, com base nas informações do meu linkedin que estão nesse link www.linkedin.com/in/tony-miguel-silva-power-bi
+Versão estática do portfólio de Tony Miguel da Silva, adaptada para publicação gratuita no GitHub Pages.
 
-estou estudando engenharia de dados também. em breve tambem vou fazer a formação de engenheiro de dados da DSA
+## Tecnologias
 
-This project was built with [Lovable](https://lovable.dev).
+- React 19 e TypeScript
+- Vite e Tailwind CSS
+- TanStack Router e TanStack Query
+- Radix UI e Lucide React
+- Vitest, ESLint e Prettier
 
-**Live app**: https://portfolio-tony-miguel.lovable.app
+## Desenvolvimento local
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/fe78d238-444a-4591-9073-4fadd65dff42).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Use Node.js 22 ou mais recente.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+## Validação
+
+```sh
+npm run check
+```
+
+O comando executa lint, verificação de tipos, testes e build de produção.
+
+## Publicação
+
+O workflow `deploy-pages.yml` valida, compila e publica o diretório `dist` no GitHub Pages a cada push na branch `main`.
+
+Site: https://tonymiguelsilva.github.io/portfolio-tony-miguel-github/
+
+## Projeto original
+
+Esta versão foi derivada do projeto criado no Lovable e preservado em:
+
+https://github.com/tonymiguelsilva/portfolio-tony-miguel

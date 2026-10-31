@@ -1,11 +1,15 @@
-import dwImg from "@/assets/projects/local-dw-architecture.jpg.asset.json";
-import gcpImg from "@/assets/projects/gcp-data-lake-cover.jpg.asset.json";
-import dataclyraImg from "@/assets/projects/dataclyra-visao-geral.png.asset.json";
+import dwImgUrl from "@/assets/projects/local-dw-architecture.jpg";
+import gcpImgUrl from "@/assets/projects/gcp-data-lake-cover.jpg";
+import dataclyraImgUrl from "@/assets/projects/dataclyra-visao-geral.png";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FarolCard } from "./FarolCard";
 import { Link } from "@tanstack/react-router";
 import { localCase, cloudCase, dataclyraCase } from "@/lib/engineering-cases";
+
+const dwImg = { url: dwImgUrl };
+const gcpImg = { url: gcpImgUrl };
+const dataclyraImg = { url: dataclyraImgUrl };
 
 type EngineeringProject = {
   casePath: "/projetos/arquitetura-local-dw" | "/projetos/cloud-gcp" | "/projetos/dataclyra";

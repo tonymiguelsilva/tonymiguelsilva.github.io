@@ -1,6 +1,10 @@
-import localCover from '@/assets/projects/local-dw-architecture.jpg.asset.json';
-import cloudCover from '@/assets/projects/gcp-data-lake-cover.jpg.asset.json';
-import dataCover from '@/assets/projects/dataclyra-visao-geral.png.asset.json';
+import localCoverUrl from '@/assets/projects/local-dw-architecture.jpg';
+import cloudCoverUrl from '@/assets/projects/gcp-data-lake-cover.jpg';
+import dataCoverUrl from '@/assets/projects/dataclyra-visao-geral.png';
+
+const localCover = { url: localCoverUrl };
+const cloudCover = { url: cloudCoverUrl };
+const dataCover = { url: dataCoverUrl };
 
 export type CaseSection = { label: string; title: string; paragraphs?: string[]; items?: { title: string; text: string }[]; flow?: string[]; note?: string };
 export type EngineeringCase = { title: string; category: string; summary: string; image: string; imageAlt: string; repository: string; platform?: string; stack: string[]; sections: CaseSection[] };

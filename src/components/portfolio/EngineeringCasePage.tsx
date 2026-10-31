@@ -7,7 +7,7 @@ import type { EngineeringCase } from '@/lib/engineering-cases';
 
 export function EngineeringCasePage({ project }: { project: EngineeringCase }) {
  return <main id="top" className="farol-page min-h-screen bg-background text-foreground">
-  <Nav sectionBase="/" />
+  <Nav />
   <header className="max-w-6xl mx-auto px-6 pt-28 md:pt-36 pb-16">
    <Button asChild variant="ghost" size="sm" className="pl-0 mb-8"><Link to="/" hash="engenharia"><ArrowLeft aria-hidden="true" />Voltar ao portfólio</Link></Button>
    <p className="font-mono text-xs text-accent uppercase mb-5">{project.category}</p>

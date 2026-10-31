@@ -1,5 +1,4 @@
-/// <reference types="bun" />
-import { describe, expect, test } from "bun:test";
+import { describe, expect, test } from "vitest";
 import { farol } from "./farol";
 
 describe("Farol simulation constraints", () => {

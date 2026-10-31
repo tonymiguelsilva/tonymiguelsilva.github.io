@@ -19,10 +19,15 @@ export const farol = {
   stack: ["Databricks", "Lakeflow Jobs", "Spark Declarative Pipelines", "Unity Catalog", "Databricks SQL", "AI Functions", "Genie Agent", "AI/BI Dashboards", "Declarative Automation Bundles", "Python", "SQL", "TypeScript", "React", "AppKit", "Supabase Storage", "Git e GitHub"],
 };
 
-import dashboard from "@/assets/projects/farol/dashboard.png.asset.json";
-import pipeline from "@/assets/projects/farol/pipeline-vertice.png.asset.json";
-import risco from "@/assets/projects/farol/projetos-risco.png.asset.json";
-import simulador from "@/assets/projects/farol/simulador.png.asset.json";
+import dashboardUrl from "@/assets/projects/farol/dashboard.png";
+import pipelineUrl from "@/assets/projects/farol/pipeline-vertice.png";
+import riscoUrl from "@/assets/projects/farol/projetos-risco.png";
+import simuladorUrl from "@/assets/projects/farol/simulador.png";
+
+const dashboard = { url: dashboardUrl };
+const pipeline = { url: pipelineUrl };
+const risco = { url: riscoUrl };
+const simulador = { url: simuladorUrl };
 
 export type FarolMedia = { title: string; image?: string; alt?: string };
 export const farolMedia: FarolMedia[] = [
