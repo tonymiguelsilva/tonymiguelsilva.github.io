@@ -31,7 +31,7 @@ O comando executa lint, verificação de tipos, testes e build de produção.
 
 O workflow `deploy-pages.yml` valida, compila e publica o diretório `dist` no GitHub Pages a cada push na branch `main`.
 
-Site: https://tonymiguelsilva.github.io/portfolio-tony-miguel-github/
+Site: https://tonymiguelsilva.github.io/
 
 ## Projeto original
 
