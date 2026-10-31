@@ -19,11 +19,15 @@ export const farol = {
   stack: ["Databricks", "Lakeflow Jobs", "Spark Declarative Pipelines", "Unity Catalog", "Databricks SQL", "AI Functions", "Genie Agent", "AI/BI Dashboards", "Declarative Automation Bundles", "Python", "SQL", "TypeScript", "React", "AppKit", "Supabase Storage", "Git e GitHub"],
 };
 
+import dashboard from "@/assets/projects/farol/dashboard.png.asset.json";
+import pipeline from "@/assets/projects/farol/pipeline-vertice.png.asset.json";
+import risco from "@/assets/projects/farol/projetos-risco.png.asset.json";
+import simulador from "@/assets/projects/farol/simulador.png.asset.json";
+
 export type FarolMedia = { title: string; image?: string; alt?: string };
-// Set image to the URL of a supplied .asset.json pointer; no other gallery edits needed.
 export const farolMedia: FarolMedia[] = [
-  { title: "Dashboard executivo" },
-  { title: "Grafo do pipeline" },
-  { title: "Databricks App — Projetos em risco" },
-  { title: "Databricks App — Simulador" },
+  { title: "Dashboard executivo", image: dashboard.url, alt: "Dashboard AI/BI executivo do Projeto Farol com KPIs do portfólio" },
+  { title: "Grafo do pipeline", image: pipeline.url, alt: "Grafo do pipeline Bronze, Silver e Gold no Databricks" },
+  { title: "Databricks App — Projetos em risco", image: risco.url, alt: "Tela Projetos em risco do Databricks App com fila de atuação" },
+  { title: "Databricks App — Simulador", image: simulador.url, alt: "Simulador de realocação de pessoas do Databricks App" },
 ];
