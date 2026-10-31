@@ -1,8 +1,12 @@
+import coverUrl from "@/assets/projects/farol/cover.jpg";
+
 export const farol = {
   title: "Projeto Farol",
   subtitle: "Torre de Controle de Projetos no Databricks",
   summary: "Plataforma Lakehouse que integra dados de projetos, custos, pessoas e fornecedores para identificar riscos, prever desvios e apoiar decisões executivas.",
   repository: "https://github.com/tonymiguelsilva/projeto_databricks",
+  cover: coverUrl,
+  coverAlt: "Arquitetura do Projeto Farol com fontes de dados, Lakehouse Databricks e produtos analíticos",
   // Flip to false again if the repository goes private.
   showRepository: true,
   simulation: { seed: 42, referenceDate: "16/10/2026" },

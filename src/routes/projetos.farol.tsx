@@ -53,6 +53,12 @@ function FarolPage() {
         <aside className="border-l-2 border-accent pl-5 mt-10 max-w-3xl text-sm text-muted-foreground leading-relaxed"><strong className="text-foreground">Simulação com dados 100% sintéticos.</strong> Gerados deterministicamente com seed {farol.simulation.seed}, para fins educacionais. A Vértice Tecnologia é fictícia; os dados não representam uma empresa, pessoas ou resultados reais. Referência: {farol.simulation.referenceDate}.</aside>
       </header>
 
+      <figure className="max-w-6xl mx-auto px-6 pb-16 md:pb-20">
+        <a href={farol.cover} target="_blank" rel="noreferrer" aria-label="Ampliar arquitetura do Projeto Farol" className="block overflow-hidden rounded-lg border border-border bg-secondary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <img src={farol.cover} alt={farol.coverAlt} className="w-full h-auto" />
+        </a>
+      </figure>
+
       <Section number="01" label="Visão geral" title="Da fragmentação à visão executiva.">
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-16">
           <div className="space-y-5 text-muted-foreground leading-relaxed"><p>Na empresa fictícia Vértice Tecnologia, informações de projetos estavam distribuídas entre PMO, RH, timesheet, financeiro, compras, Excel, ClickUp e Microsoft Project.</p><p>O Farol centraliza essas fontes em uma torre de controle no Databricks. Uma arquitetura medalhão — Bronze, Silver e Gold — sustenta três produtos analíticos e uma visão confiável de prazo, custo, risco e capacidade.</p></div>
