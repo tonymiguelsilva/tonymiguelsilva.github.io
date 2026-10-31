@@ -25,8 +25,20 @@ function RepositoryButton() {
 }
 
 function Section({ number, label, title, children }: { number: string; label: string; title: string; children: ReactNode }) {
-  return <section className="py-16 md:py-24 border-t border-border"><div className="max-w-6xl mx-auto px-6"><p className="font-mono text-xs text-accent uppercase mb-4">{number} — {label}</p><h2 className="font-display font-bold text-3xl md:text-4xl mb-10 leading-tight">{title}</h2>{children}</div></section>;
+  return <section id={`farol-${number}`} className="scroll-mt-28 py-16 md:py-24 border-t border-border"><div className="max-w-6xl mx-auto px-6"><p className="font-mono text-xs text-accent uppercase mb-4">{number} — {label}</p><h2 className="font-display font-bold text-3xl md:text-4xl mb-10 leading-tight">{title}</h2>{children}</div></section>;
 }
+
+const farolSections = [
+  ["01", "Visão geral"],
+  ["02", "Números"],
+  ["03", "Arquitetura"],
+  ["04", "Indicadores"],
+  ["05", "IA e governança"],
+  ["06", "Produtos"],
+  ["07", "Galeria"],
+  ["08", "Tecnologias"],
+  ["09", "Aprendizados"],
+] as const;
 
 const questions = [
   "Quais projetos estão atrasados ou acima do orçamento?",
@@ -58,6 +70,14 @@ function FarolPage() {
           <img src={farol.cover} alt={farol.coverAlt} className="w-full h-auto" />
         </a>
       </figure>
+
+      <nav aria-label="Navegação do Projeto Farol" className="sticky top-16 z-40 border-y border-border bg-background/95 backdrop-blur-xl">
+        <div className="max-w-6xl mx-auto px-6 overflow-x-auto">
+          <ul className="flex min-w-max gap-1 py-2">
+            {farolSections.map(([number, label]) => <li key={number}><a href={`#farol-${number}`} className="inline-flex min-h-10 items-center rounded-md px-3 text-xs font-mono text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors">{number} {label}</a></li>)}
+          </ul>
+        </div>
+      </nav>
 
       <Section number="01" label="Visão geral" title="Da fragmentação à visão executiva.">
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-16">

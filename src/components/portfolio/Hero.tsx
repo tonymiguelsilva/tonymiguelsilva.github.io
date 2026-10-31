@@ -30,10 +30,10 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="#experiencia"
+              href="#engenharia"
               className="bg-gradient-accent text-accent-foreground px-7 py-3.5 rounded-full font-medium shadow-glow hover:scale-[1.02] transition-transform"
             >
-              Ver trajetória
+              Ver projetos
             </a>
             <a
               href="https://www.linkedin.com/in/tony-miguel-silva-power-bi"
@@ -53,11 +53,11 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
+          <div className="mt-20 grid grid-cols-3 gap-6 max-w-2xl">
             {[
               { v: "8+", l: "anos de experiência" },
-              { v: "10+", l: "stacks dominadas" },
-              { v: "∞", l: "queries SQL" },
+              { v: "7", l: "projetos selecionados" },
+              { v: "34", l: "testes de qualidade" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="text-3xl font-display font-bold text-gradient">{s.v}</div>

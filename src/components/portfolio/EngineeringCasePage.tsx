@@ -22,6 +22,13 @@ export function EngineeringCasePage({ project }: { project: EngineeringCase }) {
   <figure className="max-w-6xl mx-auto px-6 pb-16">
    <a href={project.image} target="_blank" rel="noreferrer" aria-label={`Ampliar capa de ${project.title}`} className="block focus-visible:ring-2 focus-visible:ring-ring"><img src={project.image} alt={project.imageAlt} className="w-full h-auto border border-border rounded-lg" /></a>
   </figure>
+  <nav aria-label="Navegação deste projeto" className="sticky top-16 z-40 border-y border-border bg-background/95 backdrop-blur-xl">
+   <div className="max-w-6xl mx-auto px-6 overflow-x-auto">
+    <ul className="flex min-w-max gap-1 py-2">
+     {project.sections.map((section, index) => <li key={section.label}><a href={`#case-section-${index + 1}`} className="inline-flex min-h-10 items-center rounded-md px-3 text-xs font-mono text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors">{String(index + 1).padStart(2, '0')} {section.label}</a></li>)}
+    </ul>
+   </div>
+  </nav>
   {project.gallery && project.gallery.length > 0 && <section className="border-t border-border py-16 md:py-20">
    <div className="max-w-6xl mx-auto px-6">
     <p className="font-mono text-xs text-accent uppercase mb-4">Projeto em execução</p>
@@ -40,7 +47,7 @@ export function EngineeringCasePage({ project }: { project: EngineeringCase }) {
     </div>
    </div>
   </section>}
-  {project.sections.map((section, i) => <section key={section.label} className={`py-16 md:py-20 border-t border-border ${i % 2 ? 'bg-secondary/20' : ''}`}>
+  {project.sections.map((section, i) => <section id={`case-section-${i + 1}`} key={section.label} className={`scroll-mt-28 py-16 md:py-20 border-t border-border ${i % 2 ? 'bg-secondary/20' : ''}`}>
    <div className="max-w-6xl mx-auto px-6">
     <p className="font-mono text-xs text-accent uppercase mb-4">{String(i + 1).padStart(2, '0')} — {section.label}</p>
     <h2 className="font-display font-bold text-3xl md:text-4xl mb-8 leading-tight">{section.title}</h2>

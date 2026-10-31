@@ -1,6 +1,10 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { EngineeringCasePage } from '@/components/portfolio/EngineeringCasePage';
+import { createFileRoute, lazyRouteComponent } from '@tanstack/react-router';
 import { localCase } from '@/lib/engineering-cases';
+
+const EngineeringCasePage = lazyRouteComponent(
+ () => import('@/components/portfolio/EngineeringCasePage'),
+ 'EngineeringCasePage',
+);
 
 export const Route = createFileRoute('/projetos/arquitetura-local-dw')({
  head: () => ({ meta: [

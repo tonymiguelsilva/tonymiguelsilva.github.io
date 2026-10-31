@@ -1,6 +1,10 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { EngineeringCasePage } from '@/components/portfolio/EngineeringCasePage';
+import { createFileRoute, lazyRouteComponent } from '@tanstack/react-router';
 import { dataclyraCase } from '@/lib/engineering-cases';
+
+const EngineeringCasePage = lazyRouteComponent(
+ () => import('@/components/portfolio/EngineeringCasePage'),
+ 'EngineeringCasePage',
+);
 
 export const Route = createFileRoute('/projetos/dataclyra')({
  head: () => ({ meta: [
