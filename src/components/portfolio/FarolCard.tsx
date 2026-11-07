@@ -22,8 +22,8 @@ export function FarolCard() {
         <div className="mt-auto flex flex-wrap gap-3 border-t border-border/60 pt-5">
           <Button asChild size="sm"><Link to="/projetos/farol">Conhecer o projeto <ArrowUpRight aria-hidden="true" /></Link></Button>
           {farol.showRepository && (
-            <Button asChild size="sm" variant="outline">
-              <a href={farol.repository} target="_blank" rel="noreferrer"><Github aria-hidden="true" />GitHub</a>
+            <Button asChild size="sm" variant="outline" className="h-auto min-h-9 whitespace-normal py-2">
+              <a href={farol.repository} target="_blank" rel="noreferrer"><Github aria-hidden="true" />Ver código no GitHub</a>
             </Button>
           )}
         </div>
