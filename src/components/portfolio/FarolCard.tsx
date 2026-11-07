@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { farol } from "@/lib/farol";
 
@@ -19,7 +19,14 @@ export function FarolCard() {
         </ul>
         <p className="text-xs text-muted-foreground mb-6">Dados 100% sintéticos · Simulação de {farol.simulation.referenceDate}</p>
         <div className="flex flex-wrap gap-1.5 mb-6">{["Databricks", "Python", "SQL", "Unity Catalog", "React", "TypeScript"].map((text) => <span key={text} className="font-mono text-[10px] bg-secondary border border-border px-2 py-1 rounded-md">{text}</span>)}</div>
-        <div className="mt-auto pt-5 border-t border-border/60"><Button asChild size="sm"><Link to="/projetos/farol">Conhecer o projeto <ArrowUpRight aria-hidden="true" /></Link></Button></div>
+        <div className="mt-auto flex flex-wrap gap-3 border-t border-border/60 pt-5">
+          <Button asChild size="sm"><Link to="/projetos/farol">Conhecer o projeto <ArrowUpRight aria-hidden="true" /></Link></Button>
+          {farol.showRepository && (
+            <Button asChild size="sm" variant="outline">
+              <a href={farol.repository} target="_blank" rel="noreferrer"><Github aria-hidden="true" />GitHub</a>
+            </Button>
+          )}
+        </div>
       </div>
     </article>
   );
